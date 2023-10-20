@@ -2,6 +2,8 @@
 name: standard-ci
 
 on:
+  workflow_dispatch:
+    branches: [main]
   pull_request:
     paths-ignore:
       - '**.md'
@@ -10,6 +12,7 @@ on:
       - master
     paths-ignore:
       - '**.md'
+      - '.github/**'
 
 jobs:
   test:
